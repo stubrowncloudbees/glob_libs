@@ -1,4 +1,4 @@
-package com.foo.utils
+package org.stubrown.utils
 
 public void dockerTemplate(body) {
     podTemplate(label: label,
