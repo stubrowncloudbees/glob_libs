@@ -1,7 +1,7 @@
 #!/usr/bin/groovy
 package org.stubrown.pipelines.simplescripted;
 
-def build() {
+def build(name) {
     sh "building ${name}"
 }
 def test(name) {
