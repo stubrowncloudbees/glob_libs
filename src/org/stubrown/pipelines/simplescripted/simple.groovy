@@ -2,7 +2,7 @@
 package org.stubrown.pipelines.simplescripted;
 
 def build() {
-    sh "echo building "
+
 }
 def test(name) {
     sh "echo testing ${name}"
