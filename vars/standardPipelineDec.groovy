@@ -1,6 +1,6 @@
 def call(body) {
 
-    def config = [:]
+    def pipelineParams = [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
