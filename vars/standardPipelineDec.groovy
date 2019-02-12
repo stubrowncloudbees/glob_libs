@@ -1,11 +1,11 @@
 def call(body) {
 
-    def pipelineParams = [:]
+    def config = [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
 
-    def myEnvName = "${pipelineParams.envName}"
+    def myEnvName = "${config.envName}"
 
     pipeline {
         agent {
