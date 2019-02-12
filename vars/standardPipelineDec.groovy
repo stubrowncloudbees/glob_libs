@@ -4,6 +4,9 @@ def call(body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
+
+    def myEnvName = "${pipelineParams.envName}"
+
     pipeline {
         agent {
             kubernetes {
@@ -35,6 +38,7 @@ def call(body) {
                 steps {
                     container('maven') {
                         sh 'mvn -version'
+                        echo "${myEnvName}  "
                     }
                     container('busybox') {
                         script{
